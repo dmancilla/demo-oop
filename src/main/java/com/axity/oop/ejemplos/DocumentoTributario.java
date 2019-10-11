@@ -1,5 +1,6 @@
 package com.axity.oop.ejemplos;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.time.LocalDate;
@@ -26,6 +27,7 @@ public abstract class DocumentoTributario {
         return numero;
     }
 
+    @JsonIgnore
     public LocalDate getFecha() {
         return fecha;
     }
@@ -42,7 +44,7 @@ public abstract class DocumentoTributario {
         return monto;
     }
 
-    protected String getFechaFormateada() {
+    public String getFechaFormateada() {
         return getFecha().format(formatoFecha);
     }
 

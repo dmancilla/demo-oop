@@ -1,4 +1,4 @@
-package com.axity.oop.ejemplos.patrones.facade;
+package com.axity.oop.ejemplos.facade;
 
 import com.axity.oop.ejemplos.Factura;
 import com.axity.oop.ejemplos.FacturaCompleta;

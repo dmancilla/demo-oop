@@ -1,4 +1,4 @@
-package com.axity.oop.ejemplos.patrones.template;
+package com.axity.oop.ejemplos.template;
 
 import com.axity.oop.ejemplos.Factura;
 import com.axity.oop.ejemplos.GuiaDespacho;

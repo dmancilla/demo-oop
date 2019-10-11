@@ -1,4 +1,4 @@
-package com.axity.oop.ejemplos.patrones.builder;
+package com.axity.oop.ejemplos.builder;
 
 import com.axity.oop.ejemplos.Factura;
 import com.axity.oop.ejemplos.FacturaBuilder;

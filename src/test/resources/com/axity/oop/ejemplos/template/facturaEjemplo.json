@@ -1,0 +1,8 @@
+{
+  "numero" : 100,
+  "rutProveedor" : "10666555-9",
+  "rutCliente" : "77665544-9",
+  "monto" : 120000,
+  "info" : "Factura: 100, Fecha: 11/oct/2019, Cliente: 77665544-9, Monto: 120000",
+  "fechaFormateada" : "11/oct/2019"
+}
