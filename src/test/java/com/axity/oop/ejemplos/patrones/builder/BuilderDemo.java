@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import java.time.LocalDate;
 
-public class BuilderTest {
+public class BuilderDemo {
 
     @Test
     public void simpleBuilder() {

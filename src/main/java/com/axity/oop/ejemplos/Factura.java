@@ -1,5 +1,8 @@
 package com.axity.oop.ejemplos;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -11,8 +14,15 @@ public class Factura extends DocumentoTributario {
         super(numero, fecha, rutProveedor, rutCliente, monto);
     }
 
-    public String getInfo(){
-        return String.format("Factura: %d, Fecha: %s, Cliente: %s, Monto: %d", getNumero(), getFecha(), getRutCliente(), getMonto());
+    public String getInfo() {
+        return String.format("Factura: %d, Fecha: %s, Cliente: %s, Monto: %d", getNumero(), getFechaFormateada(), getRutCliente(), getMonto());
+    }
+
+    @Override
+    public String toJson() throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+        return objectMapper.writeValueAsString(this);
     }
 
     @Override

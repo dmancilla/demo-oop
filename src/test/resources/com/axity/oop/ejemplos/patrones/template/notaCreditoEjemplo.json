@@ -1,0 +1,22 @@
+{
+  "numero" : 200,
+  "fecha" : {
+    "year" : 2019,
+    "month" : "OCTOBER",
+    "chronology" : {
+      "id" : "ISO",
+      "calendarType" : "iso8601"
+    },
+    "era" : "CE",
+    "monthValue" : 10,
+    "dayOfMonth" : 11,
+    "dayOfYear" : 284,
+    "dayOfWeek" : "FRIDAY",
+    "leapYear" : false
+  },
+  "rutProveedor" : "10666555-9",
+  "rutCliente" : "77665544-9",
+  "monto" : 10000,
+  "numeroFactura" : 100,
+  "info" : "Nota de Credito: 200, Fecha: 11/oct/2019, Cliente: 77665544-9, Monto: 10000"
+}

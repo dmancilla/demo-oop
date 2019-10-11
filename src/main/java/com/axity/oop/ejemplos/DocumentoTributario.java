@@ -1,8 +1,13 @@
 package com.axity.oop.ejemplos;
 
-import java.time.LocalDate;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
-public class DocumentoTributario {
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public abstract class DocumentoTributario {
+    private final DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MMM/yyyy");
+
     private final int numero;
     private final LocalDate fecha;
     private final String rutProveedor;
@@ -36,4 +41,10 @@ public class DocumentoTributario {
     public int getMonto() {
         return monto;
     }
+
+    protected String getFechaFormateada() {
+        return getFecha().format(formatoFecha);
+    }
+
+    public abstract String toJson() throws JsonProcessingException;
 }

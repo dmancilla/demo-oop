@@ -1,5 +1,9 @@
 package com.axity.oop.ejemplos;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
 import java.time.LocalDate;
 
 public class NotaCredito extends DocumentoTributario {
@@ -14,7 +18,14 @@ public class NotaCredito extends DocumentoTributario {
         return numeroFactura;
     }
 
+    @Override
+    public String toJson() throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+        return objectMapper.writeValueAsString(this);
+    }
+
     public String getInfo() {
-        return String.format("Nota de Credito: %d, Cliente: %s, Monto: %d", getNumero(), getRutCliente(), getMonto());
+        return String.format("Nota de Credito: %d, Fecha: %s, Cliente: %s, Monto: %d", getNumero(), getFechaFormateada(), getRutCliente(), getMonto());
     }
 }
