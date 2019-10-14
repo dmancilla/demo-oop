@@ -26,17 +26,13 @@ public class PolimorfismoDemo {
 
     @Test
     public void polimorfismoClasePadre() {
-        Factura factura = new Factura(100, LocalDate.now(), "10666555-9", "77665544-9", 120_000);
-        GuiaDespacho guiaDespacho = new GuiaDespacho(150, LocalDate.now(), "10666555-9", "77665544-9", 100, 120_000);
-        NotaCredito notaCredito = new NotaCredito(200, LocalDate.now(), "10666555-9", "77665544-9", 100, 10_000);
-
-        DocumentoTributario docFactura = factura;
+        DocumentoTributario docFactura = new Factura(100, LocalDate.now(), "10666555-9", "77665544-9", 120_000);
         assertEquals(100, docFactura.getNumero());
 
-        DocumentoTributario docGuiaDespacho = guiaDespacho;
+        DocumentoTributario docGuiaDespacho = new GuiaDespacho(150, LocalDate.now(), "10666555-9", "77665544-9", 100, 120_000);
         assertEquals(150, docGuiaDespacho.getNumero());
 
-        DocumentoTributario docNotaCredito = notaCredito;
+        DocumentoTributario docNotaCredito = new NotaCredito(200, LocalDate.now(), "10666555-9", "77665544-9", 100, 10_000);
         assertEquals(200, docNotaCredito.getNumero());
     }
 }

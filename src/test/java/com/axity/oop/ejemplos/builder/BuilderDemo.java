@@ -6,12 +6,13 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class BuilderDemo {
 
     @Test
     public void simpleBuilder() {
-        Factura factura1 = new Factura(100, LocalDate.now(), "10666555-9", "77665544-9", 120_000);
+        Factura factura1 = new Factura(100, LocalDate.now().minus(1, ChronoUnit.DAYS), "10666555-9", "77665544-9", 120_000);
 
         Factura factura2 = new FacturaBuilder()
                 .numero(100)
